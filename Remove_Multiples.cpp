@@ -26,10 +26,17 @@ typedef vector<pll> vpll;
 
 void solve()
 { 
-    ll n;
-    cin>>n;
-    vll v(n);
-  
+    ll n,m;
+    cin>>n>>m;
+    ll ans=n*(n+1);
+    ans=ans/2;
+    for(int i=0;i<m;i++)
+    {
+        ll x;
+        cin>>x;
+        ans-=x;
+    }
+    cout<<ans<<endl;
 }
 int main()
 {   ios_base::sync_with_stdio(false);

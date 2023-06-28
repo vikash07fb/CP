@@ -26,9 +26,24 @@ typedef vector<pll> vpll;
 
 void solve()
 { 
-    ll n;
-    cin>>n;
+    ll n,m,k;
+    cin>>n>>m>>k;
     vll v(n);
+    for(int i=0;i<n;i++)cin>>v[i];
+
+    for(int i=0;i<n;i++)
+    {
+        v[i]=m-v[i]+1;
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(v[i]-k<0)
+        {
+            N
+            return ;
+        }
+    }
+    Y
   
 }
 int main()

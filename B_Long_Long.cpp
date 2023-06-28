@@ -29,7 +29,35 @@ void solve()
     ll n;
     cin>>n;
     vll v(n);
-  
+    for(int i=0;i<n;i++)cin>>v[i];
+
+    ll s=0;
+    ll c=0;
+    vll b;
+
+    for(int i=0;i<n;i++)
+    {
+        if(v[i]==0 && c>0)
+        {
+            c++;
+        }else if(v[i]<0)
+        {
+            c++;
+        }else {
+            b.pb(c);
+            c=0;
+        }
+
+        s+=abs(v[i]);
+    }
+
+    ll f=0;
+    b.pb(c);
+    for(auto it:b)
+    {
+        if(it!=0)f+=1;
+    }
+    cout<<s<<" "<<f<<endl;
 }
 int main()
 {   ios_base::sync_with_stdio(false);

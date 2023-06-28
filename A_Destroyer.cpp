@@ -24,12 +24,29 @@ typedef vector<pii> vpii;
 typedef vector<pll> vpll;
 
 
+
 void solve()
 { 
-    ll n;
-    cin>>n;
-    vll v(n);
-  
+  ll n;
+  cin>>n;
+  vll v(101);
+  for(int i=0;i<n;i++)
+  {
+    ll x;
+    cin>>x;
+    v[x]++;
+  }
+
+  for(int i=1;i<101;i++)
+  {
+    if(v[i]>v[i-1])
+    {
+        N
+        return ;
+    }
+  }
+  Y
+
 }
 int main()
 {   ios_base::sync_with_stdio(false);

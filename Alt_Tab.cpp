@@ -26,20 +26,40 @@ typedef vector<pll> vpll;
 
 void solve()
 { 
-    ll n;
+    int n;
     cin>>n;
-    vll v(n);
+    // cout<<n<<endl;
+    stack<string>  st;
+
+    ll j=0;
+    while(j<n)
+    {   string s;
+        cin>>s;
+        st.push(s);
+        j++;
+    }
+
+    map<string,int> mp;
+
+    ll k=st.size();
+
+    for(int i=0;i<k;i++)
+    {
+        string tp=st.top();
+        st.pop();
+
+        if(mp.find(tp)==mp.end()){
+
+            ll a=tp.size();
+            mp[tp]++;
+            cout<<tp[a-2]<<tp[a-1];
+        }else continue;
+    }
   
 }
 int main()
 {   ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-    
-    ll t;
-    cin>>t;
-    while(t--)
-    {
-        solve();
-    }
+    solve();
 }

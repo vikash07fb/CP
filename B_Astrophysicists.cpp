@@ -11,7 +11,7 @@ using namespace std;
 #define N cout << "NO" << endl;
 #define F first
 #define S second
-const int mod=1e9+7;
+const int mod = 1e9 + 7;
 
 typedef vector<int> vi;
 typedef vector<char> vc;
@@ -23,22 +23,31 @@ typedef pair<ll, ll> pll;
 typedef vector<pii> vpii;
 typedef vector<pll> vpll;
 
-
 void solve()
-{ 
-    ll n;
-    cin>>n;
-    vll v(n);
-  
+{
+    ll n, k, g;
+    cin >> n >> k >> g;
+    // vll v(n);
+    ll tp1=k*g;
+    ll tp2=(g+1)/2;
+   
+    ll tp3 = tp1 - (tp2 - 1) * n;
+    if (tp3 < 0)
+    {
+        cout << tp1 << endl;
+        return;
+    }
+    ll ans = tp1 - ((((tp1 - (tp2 - 1) * n + g - 1) / g) * g));
+    cout << ans << endl;
 }
 int main()
-{   ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    
     ll t;
-    cin>>t;
-    while(t--)
+    cin >> t;
+    while (t--)
     {
         solve();
     }

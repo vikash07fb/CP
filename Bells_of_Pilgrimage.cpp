@@ -26,9 +26,23 @@ typedef vector<pll> vpll;
 
 void solve()
 { 
-    ll n;
-    cin>>n;
-    vll v(n);
+    ll n,x,k,p;
+    cin>>n>>x>>k>>p;
+    
+    for(int i=0;i<k;i++)
+    {
+        if(x>0)
+        {
+            p+=10;
+            x--;
+        }else {
+            p+=5;
+        }
+       
+    }
+    if(n==k)p+=20;
+    cout<<p<<endl;
+
   
 }
 int main()
@@ -43,3 +57,5 @@ int main()
         solve();
     }
 }
+
+
